@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "595445067642",
+    "firebase_url": "https://ledgerx-bigcompany.firebaseio.com",
+    "project_id": "ledgerx-bigcompany",
+    "storage_bucket": "ledgerx-bigcompany.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:595445067642:android:1b7a18092ec10851d470c3",
+        "android_client_info": {
+          "package_name": "com.bigcompany.ledgerx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "595445067642-np8ua939cir4bsltngol5pmhuv08nfpn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwQ_RcSVzf_vsTwxOuKM3x8jxtS2Bakv4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "595445067642-np8ua939cir4bsltngol5pmhuv08nfpn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

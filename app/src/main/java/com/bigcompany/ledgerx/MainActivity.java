@@ -1,10 +1,8 @@
 package com.bigcompany.ledgerx;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
-import com.google.firebase.FirebaseApp;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 

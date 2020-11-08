@@ -32,6 +32,8 @@ public class SignupActivity extends AppCompatActivity {
                 startActivity(new Intent(SignupActivity.this, MainActivity.class));
             }
         });
+        /*Following code is just to start Home activity to test action menu.
+        * It will change when we will start backend programming*/
         mSignUpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -16,11 +16,13 @@ public class HomeActivity extends AppCompatActivity {
 
         actionBar = getSupportActionBar();
         actionBar.setTitle("Memory of ------");
+        /* ------ in line 18 will be username of signed in user as per*/
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
+        /*Linking menu_main.xml to Home activity*/
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_main, menu);
 

@@ -10,7 +10,7 @@
         android:id="@+id/usernameSignup_TextField"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Choose username"
+        android:hint="Enter Email"
         android:layout_centerInParent="true"
         android:padding="20px"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
@@ -41,7 +41,7 @@
     <Button
         android:id="@+id/signup_button"
 
-        android:text="LOGIN"
+        android:text="SIGN UP"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:layout_width="150dp"

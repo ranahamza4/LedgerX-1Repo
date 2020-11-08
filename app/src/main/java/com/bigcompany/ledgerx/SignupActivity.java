@@ -33,7 +33,7 @@ public class SignupActivity extends AppCompatActivity {
             }
         });
         /*Following code is just to start Home activity to test action menu.
-        * It will change when we will start backend programming*/
+        * It will change when we will start to program backend*/
         mSignUpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

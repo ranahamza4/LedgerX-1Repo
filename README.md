@@ -1,5 +1,6 @@
 # LedgerX-1Rep
-I have added action menu and search icon in Home Activity. To test i use signup button to start Home activity but when we will start to programm back end this code will be change.
+Firebase user sign up integrated but without email verification because for test purpose we have ro login sign up many virtual users and email verification will waste our time.
+We will integrate email verificarion after some time.
 Please check, pull, write code, commit and push :)
 Thanks and regards, 
 Bigcompany

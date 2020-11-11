@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="20dp"
+        android:outlineAmbientShadowColor="@color/cardview_dark_background"
+      android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="3dp"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/user_profileimage_view"
+                    android:src="@drawable/common_google_signin_btn_icon_dark_focused"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="#FFFFFF"
+
+                    />
+
+                <TextView
+                    android:id="@+id/other_username_textView"
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:text="Other Person Name"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/otherperson_Name_Text_Color"
+                    android:textSize="20dp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/last_edited_textView"
+                    android:layout_width="44dp"
+                    android:layout_height="11dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/last_edited_TextView"
+                    android:textSize="8dp"></TextView>
+
+                <TextView
+                    android:id="@+id/last_edited_DateAndTime_TextView"
+                    android:layout_width="80dp"
+                    android:layout_height="11dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="5dp"
+                    android:text="08/11/2020 10:10 PM"
+                    android:textColor="@color/lightBlue"
+                    android:textSize="8dp"></TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Give"
+                    android:textColor="@color/red"
+                    android:textSize="15dp"></TextView>
+
+                <TextView
+                    android:id="@+id/user_TotalGive_TextView"
+                    style="@style/UnderLine"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="15dp"
+                    android:text="0.00"
+                    android:textColor="#000"
+                    android:textSize="15dp"></TextView>
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#D3D3D3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Take"
+                    android:textColor="@color/lightBlue"
+                    android:textSize="15dp"></TextView>
+
+                <TextView
+                    android:id="@+id/user_TotalTake_TextView"
+                    style="@style/UnderLine"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="15dp"
+                    android:text="0.00"
+                    android:textColor="#000"
+                    android:textSize="15dp"></TextView>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

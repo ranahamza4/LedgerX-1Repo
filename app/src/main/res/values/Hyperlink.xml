@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="UnderLine">
+        <item name="android:textColor">#D3D3D3</item>
+        <item name="android:background">@drawable/hyperlink_underline</item>
+    </style>
+
+</resources>

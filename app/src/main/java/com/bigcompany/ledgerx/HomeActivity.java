@@ -1,14 +1,16 @@
 package com.bigcompany.ledgerx;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class HomeActivity extends AppCompatActivity {
     ActionBar actionBar;
@@ -19,7 +21,28 @@ public class HomeActivity extends AppCompatActivity {
 
         actionBar = getSupportActionBar();
         actionBar.setTitle("Memory of ------");
+        RecyclerView recyclerView=findViewById(R.id.homeRecycler);
+
+
         /* ------ in line 18 will be username of signed in user as per*/
+
+        //Sample Data for home activity
+        UserData[] mData= {
+                new UserData("Rana Hamza","rana47","rdhamza47@gmail.com",500,1000),
+                new UserData("Sarmad Sohaib","rana47","rdhamza47@gmail.com",300,1200),
+                new UserData("Khaleek Ahmad","rana47","rdhamza47@gmail.com",200,100),
+                new UserData("Rehan Anjum","rana47","rdhamza47@gmail.com",300,10),
+                new UserData("Jutt Da Muqabla","rana47","rdhamza47@gmail.com",500,900)
+        };
+
+        //Connecting input Data to adapter
+        UserDataAdapter adapter= new UserDataAdapter(mData,this);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(adapter);
+
+
+
     }
 
     @Override

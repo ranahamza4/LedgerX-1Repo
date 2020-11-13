@@ -1,5 +1,6 @@
 package com.bigcompany.ledgerx;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -60,7 +61,7 @@ public class HomeActivity extends AppCompatActivity {
         switch (item.getItemId())
         {
             case R.id.action_profile:
-                Toast.makeText(this, "Profile", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(HomeActivity.this, ProfileActivity.class));
         }
         return super.onOptionsItemSelected(item);
     }

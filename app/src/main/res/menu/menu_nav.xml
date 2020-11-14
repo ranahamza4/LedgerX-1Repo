@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Take" android:id="@+id/nav_his_take"
+        android:icon="@drawable/ic_arrow_in_black"/>
+
+    <item android:title="Give" android:id="@+id/nav_his_give"
+        android:icon="@drawable/ic_arrow_out_black"/>
+
+</menu>

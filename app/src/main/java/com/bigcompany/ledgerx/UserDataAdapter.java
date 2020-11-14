@@ -1,6 +1,7 @@
 package com.bigcompany.ledgerx;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,7 +45,7 @@ public class UserDataAdapter extends RecyclerView.Adapter<UserDataAdapter.ViewHo
       holder.itemView.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View view) {
-              Toast.makeText(context,mUserDataList.getmUserName(),Toast.LENGTH_SHORT).show();
+              context.startActivity(new Intent(context, HisLedgerActivity.class));
           }
       });
     }

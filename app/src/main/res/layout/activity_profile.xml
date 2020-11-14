@@ -158,7 +158,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:hint="Name">
+                android:hint="Name"
+                style="@style/Widget.Design.TextInputLayout">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -172,7 +173,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:hint="E-Mail">
+                android:hint="E-Mail"
+                style="@style/Widget.Design.TextInputLayout">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -187,16 +189,18 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:hint="Password"
-                app:endIconMode="password_toggle">
+                app:endIconMode="password_toggle"
+                style="@style/Widget.Design.TextInputLayout">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:drawableStart="@drawable/ic_person_black"
-                    android:drawableLeft="@drawable/ic_person_black"
+                    android:drawableStart="@drawable/ic_lock_black"
+                    android:drawableLeft="@drawable/ic_lock_black"
                     android:drawablePadding="10dp"
                     android:inputType="textPassword"
-                    android:text="------" />
+                    android:text="------"
+                    />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button

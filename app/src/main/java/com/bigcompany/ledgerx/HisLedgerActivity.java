@@ -3,6 +3,7 @@ package com.bigcompany.ledgerx;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -25,8 +26,13 @@ public class HisLedgerActivity extends AppCompatActivity {
 
         mTakeGiveBottomNavigation = findViewById(R.id.bnv_hisLedger_navigateTakeGive);
 
-        actionBar.setTitle("His name"); // name of clicked user
         mTakeGiveBottomNavigation.setOnNavigationItemSelectedListener(takeOrGiveNavigationSelector);
+
+        actionBar.setTitle("His name"); // name of clicked user
+        TakeFragment takeFragment = new TakeFragment();
+        FragmentTransaction takeFragmentTransaction = getSupportFragmentManager().beginTransaction();
+        takeFragmentTransaction.replace(R.id.fl_hisLedger_contents, takeFragment, "");
+        takeFragmentTransaction.commit();
     }
 
     BottomNavigationView.OnNavigationItemSelectedListener takeOrGiveNavigationSelector
@@ -36,10 +42,18 @@ public class HisLedgerActivity extends AppCompatActivity {
             switch (item.getItemId())
             {
                 case R.id.nav_his_take:
-                    actionBar.setTitle("user Name(Take)");
+                    actionBar.setTitle("Take from user_name");
+                    TakeFragment takeFragment = new TakeFragment();
+                    FragmentTransaction takeFragmentTransaction = getSupportFragmentManager().beginTransaction();
+                    takeFragmentTransaction.replace(R.id.fl_hisLedger_contents, takeFragment, "");
+                    takeFragmentTransaction.commit();
                     return true;
                 case R.id.nav_his_give:
-                    actionBar.setTitle("user Name(Give)");
+                    actionBar.setTitle("Give to user_name");
+                    GiveFragment giveFragment = new GiveFragment();
+                    FragmentTransaction giveFragmentTransaction = getSupportFragmentManager().beginTransaction();
+                    giveFragmentTransaction.replace(R.id.fl_hisLedger_contents, giveFragment, "");
+                    giveFragmentTransaction.commit();
                     return true;
             }
             return false;

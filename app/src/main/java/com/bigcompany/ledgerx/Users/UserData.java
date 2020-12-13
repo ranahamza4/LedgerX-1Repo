@@ -1,4 +1,4 @@
-package com.bigcompany.ledgerx;
+package com.bigcompany.ledgerx.Users;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 

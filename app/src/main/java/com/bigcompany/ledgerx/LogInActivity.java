@@ -2,35 +2,29 @@ package com.bigcompany.ledgerx;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.Task;
+import com.bigcompany.ledgerx.Users.HomeActivity;
 import com.google.android.material.textfield.TextInputLayout;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
-public class MainActivity extends AppCompatActivity {
+public class LogInActivity extends AppCompatActivity {
 
     TextView mSignUpTxt;
     Button mLoginBtn;
     TextInputLayout mUserNameLoginTxtField, mPasswordLoginTxtField;
 
     FirebaseAuth mAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
         this.getSupportActionBar().hide();
 
         mSignUpTxt = findViewById(R.id.signUp_textView);
@@ -43,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         mSignUpTxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, SignupActivity.class));
+                startActivity(new Intent(LogInActivity.this, SignupActivity.class));
             }
         });
 
@@ -53,18 +47,13 @@ public class MainActivity extends AppCompatActivity {
                 String email = mUserNameLoginTxtField.getEditText().getText().toString().trim();
                 String password = mPasswordLoginTxtField.getEditText().getText().toString().trim();
 
-                if (!Patterns.EMAIL_ADDRESS.matcher(email).matches())
-                {
+                if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
                     mUserNameLoginTxtField.setError("Invalid Email!");
                     mUserNameLoginTxtField.setFocusable(true);
-                }
-                else if (password.length() < 6)
-                {
+                } else if (password.length() < 6) {
                     mPasswordLoginTxtField.setError("Password contain atleast 6 characters!");
                     mPasswordLoginTxtField.setFocusable(true);
-                }
-                else
-                {
+                } else {
                     loginUser(email, password);
                 }
             }
@@ -72,7 +61,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void loginUser(String email, String password) {
-        mAuth.signInWithEmailAndPassword(email, password)
+
+       //disabling login check for test purposes
+        startActivity(new Intent(LogInActivity.this, HomeActivity.class));
+
+
+
+        /*mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -92,5 +87,6 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, ""+e.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
+    */
     }
 }

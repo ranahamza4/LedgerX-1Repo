@@ -3,8 +3,6 @@
     <string name="title_activity_main_screen">ScrollingActivity</string>
     <string name="last_edited_TextView">Last Edited:</string>
     <string name="large_text">
-        "Material is the metaphor.\n\n"
-
         "A material metaphor is the unifying theory of a rationalized space and a system of motion."
         "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
         "technologically advanced and open to imagination and magic.\n"
@@ -100,4 +98,5 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_loans">LoansActivity</string>
 </resources>

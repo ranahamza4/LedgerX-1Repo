@@ -26,7 +26,6 @@ public class LogInActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         this.getSupportActionBar().hide();
-
         mSignUpTxt = findViewById(R.id.signUp_textView);
         mLoginBtn = findViewById(R.id.login_button);
         mUserNameLoginTxtField = findViewById(R.id.username_TextField);
